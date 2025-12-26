@@ -9,7 +9,7 @@ const tabs = [
   { id: "community", label: "Care @ Community", path: "/" },
   { id: "carehome", label: "Care @ Home", path: "/care-home" },
   { id: "personalized", label: "Personal Care", path: "/personalized" },
-  { id: "carepay", label: "Telth Care Pay™", path: "/care-pay", comingSoon: true },
+  { id: "carepay", label: "Telth Care Pay™", path: "/care-pay" },
 ];
 
 export const Header = () => {
