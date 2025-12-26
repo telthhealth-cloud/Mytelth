@@ -18,6 +18,7 @@ const devices = [
       "Activity levels & caloric expenditure",
       "Stress indicators & recovery metrics",
       "ECG on demand",
+      "Move lock-Blood alcoholic content based alert"
     ],
     delivers: [
       "Real-time health alerts",
