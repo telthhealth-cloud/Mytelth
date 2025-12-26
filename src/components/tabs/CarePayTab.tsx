@@ -121,7 +121,7 @@ export const CarePayTab = () => {
             <CardHeader>
               <CardTitle className="text-2xl">Essential</CardTitle>
               <div className="text-3xl font-bold text-primary mt-2">
-                $49<span className="text-base text-muted-foreground">/month</span>
+                <span className="text-base text-muted-foreground">/month</span>
               </div>
               <CardDescription>Perfect for individuals and families</CardDescription>
             </CardHeader>
@@ -163,7 +163,7 @@ export const CarePayTab = () => {
             <CardHeader>
               <CardTitle className="text-2xl">Premium</CardTitle>
               <div className="text-3xl font-bold text-primary mt-2">
-                $99<span className="text-base text-muted-foreground">/month</span>
+                <span className="text-base text-muted-foreground">/month</span>
               </div>
               <CardDescription>Comprehensive care for your whole family</CardDescription>
             </CardHeader>
@@ -208,7 +208,7 @@ export const CarePayTab = () => {
             <CardHeader>
               <CardTitle className="text-2xl">Elite</CardTitle>
               <div className="text-3xl font-bold text-primary mt-2">
-                $199<span className="text-base text-muted-foreground">/month</span>
+                <span className="text-base text-muted-foreground">/month</span>
               </div>
               <CardDescription>Complete personalized health management</CardDescription>
             </CardHeader>
