@@ -2,7 +2,8 @@ import { HeroSection } from "../HeroSection";
 import { Button } from "../ui/button";
 import heroCarePay from "@/assets/hero-carepay.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-
+import card2 from '../../../public/images/Paycard2.jpeg'
+import card from '../../../public/images/Paycard.jpeg'
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -286,9 +287,9 @@ export const CarePayTab = () => {
               >
                 <div className="relative transform hover:scale-105 transition-transform duration-500">
                   <img
-                    src="/images/telth-care-pay-card.jpg"
+                    src={card}
                     alt="Telth Care Pay Card"
-                    className="w-full rounded-2xl shadow-2xl"
+                    className="rounded-2xl shadow-2xl h-96 w-[100%] object-cover "
                   />
                   {/* Floating badges */}
                   <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg">
