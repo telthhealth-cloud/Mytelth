@@ -8,46 +8,80 @@ import {
   TrendingUp,
   Shield,
   Zap,
+  ShoppingBag,
 } from "lucide-react";
 import { InterestForm } from "./InterestForm";
 
-const benefits = [
+const accordionData = [
   {
-    icon: CreditCard,
-    title: "Universal Acceptance",
-    desc: "Accepted at all Telth network facilities and partners",
+    title: "Telth CarePay Plans",
+    brief: "Healthcare made simple, predictable, and affordable",
+    details: [
+      "Subscription-based health memberships",
+      "Preventive & diagnostic care access",
+      "Care@Home and Care@Community services",
+      "AI Health Hub & kiosk services",
+      "Priority consultations & care pathways",
+      "Family & corporate health plans",
+      "Transparent monthly or annual pricing",
+    ],
+    footer:
+      "Reduces out-of-pocket medical expenses while encouraging early detection.",
   },
   {
-    icon: Hospital,
-    title: "Healthcare Hub",
-    desc: "Direct access to hospitals, clinics, and specialists",
+    title: "T-Pay – Digital Payments",
+    brief: "One payment system for health and everyday life",
+    details: [
+      "QR code payments",
+      "Online and in-app payments",
+      "Clinic, pharmacy & lab payments",
+      "Marketplace purchases",
+      "Franchise & partner settlements",
+      "Wallet-based & linked-bank payments",
+    ],
+    footer:
+      "Ensures cashless, contactless, and traceable transactions ecosystem-wide.",
   },
   {
-    icon: Wallet,
-    title: "Smart Payments",
-    desc: "Automated insurance claims and flexible payment plans",
+    title: "Telth G-Token",
+    brief: "Health rewards that become real wealth",
+    details: [
+      "Earn tokens for preventive care",
+      "Accumulate value securely over time",
+      "Redeem or exchange for physical gold",
+      "Access preferred jewellers globally",
+      "Long-term savings & value preservation",
+    ],
+    footer:
+      "Converts health actions into tangible wealth.",
   },
   {
-    icon: TrendingUp,
-    title: "Wealth Integration",
-    desc: "Link to health savings accounts and investment options",
-  },
-  {
-    icon: Shield,
-    title: "Secure Transactions",
-    desc: "Bank-grade security with fraud protection",
-  },
-  {
-    icon: Zap,
-    title: "Instant Processing",
-    desc: "Real-time approvals and zero waiting periods",
+    title: "T-Mart – Ethical Marketplace",
+    brief: "Quality products. Trusted sources. Global reach.",
+    details: [
+      "Curated organic & wellness products",
+      "High quality & traceability standards",
+      "Digitization for farmers & producers",
+      "Neighborhood stores & cooperatives",
+      "Global distribution via Telth ecosystem",
+      "Fair pricing & ethical sourcing",
+    ],
+    footer:
+      "Empowers local producers and ethical commerce.",
   },
 ];
+
 
 const healthcareServices = ["Hospital Network", "Pharmacy Services", "Wellness Programs"];
 const financialServices = ["Insurance Claims", "Savings Accounts", "Investment Options"];
 
 export const CarePayCard = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+const toggleAccordion = (index) => {
+  setActiveIndex(activeIndex === index ? null : index);
+};
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -107,35 +141,71 @@ export const CarePayCard = () => {
           </motion.div>
 
           {/* Benefits List */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-6"
+     {/* RIGHT SIDE – ACCORDION */}
+<motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={inView ? { opacity: 1, x: 0 } : {}}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  className="space-y-4"
+>
+  {accordionData.map((item, index) => {
+    const isOpen = activeIndex === index;
+
+    return (
+      <div
+        key={index}
+        className="bg-white rounded-xl shadow-md overflow-hidden border"
+      >
+        {/* Header */}
+        <button
+          onClick={() => toggleAccordion(index)}
+          className="w-full flex justify-between items-center p-5 text-left"
+        >
+          <div>
+            <h3 className="font-semibold text-gray-900">
+              {item.title}
+            </h3>
+            <p className="text-sm text-gray-500">
+              {item.brief}
+            </p>
+          </div>
+
+          <motion.span
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-xl font-bold"
           >
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.6 + index * 0.1 }}
-                  className="flex gap-4 items-start"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[hsl(var(--primary-purple))] to-[hsl(var(--accent-teal))] rounded-xl flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{benefit.desc}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+            ▼
+          </motion.span>
+        </button>
+
+        {/* Body */}
+        <motion.div
+          initial={false}
+          animate={{
+            height: isOpen ? "auto" : 0,
+            opacity: isOpen ? 1 : 0,
+          }}
+          transition={{ duration: 0.4 }}
+          className="overflow-hidden"
+        >
+          <div className="px-5 pb-5 text-sm text-gray-600 space-y-2">
+            <ul className="list-disc pl-5 space-y-1">
+              {item.details.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+
+            <p className="mt-3 text-gray-500 italic">
+              {item.footer}
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    );
+  })}
+</motion.div>
+
         </div>
 
         {/* Central Hub Diagram */}
