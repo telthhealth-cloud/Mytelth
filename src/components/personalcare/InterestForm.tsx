@@ -107,19 +107,19 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-50 bg-background-dark/95 backdrop-blur-sm"
+            className="fixed inset-0 z-50 bg-background-white"
           />
 
-          {/* Form Modal */}
+          {/* Form Modal */}  
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 1, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
+            className="fixed inset-0 z-50 bg-white flex items-center justify-center p-4 pointer-events-none scrollbar-hidden"
           >
-            <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto pointer-events-auto">
-              <div className="relative glass-card-futuristic bg-background-dark/95 rounded-2xl p-8 border-2 border-primary/30 shadow-2xl">
+            <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide pointer-events-auto">
+              <div className="relative bg-background-dark rounded-2xl p-8 border-2 border-primary/30 shadow-2xl">
                 {/* Close Button */}
                 <button
                   onClick={onClose}
@@ -149,7 +149,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                         <h3 className="text-2xl font-bold gradient-text-purple-teal">
                           Thank You!
                         </h3>
-                        <p className="text-white/80">
+                        <p className="text-black/80">
                           We'll contact you within 24 hours
                         </p>
                       </div>
@@ -164,7 +164,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                       ? "Apply for Care Pay™ Card" 
                       : "Begin Your Health Journey"}
                   </h2>
-                  <p className="text-white/70 text-lg">
+                  <p className="text-black/70 text-lg">
                     {watch("inquiry_type") === "care_pay_card"
                       ? "Get your gateway to seamless healthcare payments"
                       : "Share your details and we'll craft a personalized care plan for you"}
@@ -175,7 +175,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   {/* Full Name */}
                   <div className="space-y-2">
-                    <Label htmlFor="full_name" className="text-white flex items-center gap-2">
+                    <Label htmlFor="full_name" className="text-black flex items-center gap-2">
                       <User className="w-4 h-4 text-primary" />
                       Full Name *
                     </Label>
@@ -183,7 +183,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                       id="full_name"
                       {...register("full_name")}
                       placeholder="John Doe"
-                      className="bg-white/5 border-white/20 focus:border-primary text-white placeholder:text-white/40"
+                      className="bg-white/5 border-white/20 focus:border-primary text-black placeholder:text-black/40"
                     />
                     {errors.full_name && (
                       <p className="text-sm text-red-400">{errors.full_name.message}</p>
@@ -192,7 +192,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
 
                   {/* Email */}
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-white flex items-center gap-2">
+                    <Label htmlFor="email" className="text-black flex items-center gap-2">
                       <Mail className="w-4 h-4 text-primary" />
                       Email Address *
                     </Label>
@@ -201,7 +201,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                       type="email"
                       {...register("email")}
                       placeholder="john@example.com"
-                      className="bg-white/5 border-white/20 focus:border-primary text-white placeholder:text-white/40"
+                      className="bg-white/5 border-white/20 focus:border-primary text-black placeholder:text-black/40"
                     />
                     {errors.email && (
                       <p className="text-sm text-red-400">{errors.email.message}</p>
@@ -210,7 +210,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
 
                   {/* Phone */}
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-white flex items-center gap-2">
+                    <Label htmlFor="phone" className="text-black flex items-center gap-2">
                       <Phone className="w-4 h-4 text-primary" />
                       Phone Number *
                     </Label>
@@ -219,7 +219,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                       type="tel"
                       {...register("phone")}
                       placeholder="+91 98765 43210"
-                      className="bg-white/5 border-white/20 focus:border-primary text-white placeholder:text-white/40"
+                      className="bg-white/5 border-black/20 focus:border-primary text-black placeholder:text-black/40"
                     />
                     {errors.phone && (
                       <p className="text-sm text-red-400">{errors.phone.message}</p>
@@ -228,7 +228,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
 
                   {/* Location */}
                   <div className="space-y-2">
-                    <Label htmlFor="location" className="text-white flex items-center gap-2">
+                    <Label htmlFor="location" className="text-black flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-primary" />
                       Location *
                     </Label>
@@ -236,7 +236,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                       onValueChange={(value) => setValue("location", value)}
                       value={selectedLocation}
                     >
-                      <SelectTrigger className="bg-white/5 border-white/20 focus:border-primary text-white">
+                      <SelectTrigger className="bg-white/5 border-white/20 focus:border-primary text-black">
                         <SelectValue placeholder="Select your city" />
                       </SelectTrigger>
                       <SelectContent>
@@ -250,14 +250,14 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                     {errors.location && (
                       <p className="text-sm text-red-400">{errors.location.message}</p>
                     )}
-                    <p className="text-xs text-white/50">
+                    <p className="text-xs text-black/50">
                       Your location helps us provide accurate regional pricing and service availability
                     </p>
                   </div>
 
                   {/* Inquiry Type */}
                   <div className="space-y-2">
-                    <Label htmlFor="inquiry_type" className="text-white flex items-center gap-2">
+                    <Label htmlFor="inquiry_type" className="text-black flex items-center gap-2">
                       <MessageSquare className="w-4 h-4 text-primary" />
                       What are you interested in? *
                     </Label>
@@ -265,7 +265,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                       onValueChange={(value) => setValue("inquiry_type", value as "personal_care" | "care_pay_card")}
                       value={watch("inquiry_type")}
                     >
-                      <SelectTrigger className="bg-white/5 border-white/20 focus:border-primary text-white">
+                      <SelectTrigger className="bg-white/5 border-white/20 focus:border-primary text-black">
                         <SelectValue placeholder="Select inquiry type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -280,7 +280,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
 
                   {/* Preferred Contact Method */}
                   <div className="space-y-2">
-                    <Label className="text-white">Preferred Contact Method *</Label>
+                    <Label className="text-black">Preferred Contact Method *</Label>
                     <div className="flex gap-4">
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
@@ -289,7 +289,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                           {...register("preferred_contact")}
                           className="w-4 h-4 text-primary"
                         />
-                        <span className="text-white">Email</span>
+                        <span className="text-black">Email</span>
                       </label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
@@ -298,14 +298,14 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                           {...register("preferred_contact")}
                           className="w-4 h-4 text-primary"
                         />
-                        <span className="text-white">Phone</span>
+                        <span className="text-black">Phone</span>
                       </label>
                     </div>
                   </div>
 
                   {/* Message */}
                   <div className="space-y-2">
-                    <Label htmlFor="message" className="text-white flex items-center gap-2">
+                    <Label htmlFor="message" className="text-black flex items-center gap-2">
                       <MessageSquare className="w-4 h-4 text-primary" />
                       Additional Information (Optional)
                     </Label>
@@ -314,7 +314,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                       {...register("message")}
                       placeholder="Tell us about your health goals or specific needs..."
                       rows={4}
-                      className="bg-white/5 border-white/20 focus:border-primary text-white placeholder:text-white/40 resize-none"
+                      className="bg-white/5 border-white/20 focus:border-primary text-black placeholder:text-black/40 resize-none"
                     />
                     {errors.message && (
                       <p className="text-sm text-red-400">{errors.message.message}</p>
@@ -325,7 +325,7 @@ export const InterestForm = ({ isOpen, onClose, defaultInquiryType = "personal_c
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-primary to-accent-teal hover:opacity-90 text-white font-semibold py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+                    className="w-full bg-gradient-to-r from-primary to-accent-teal hover:opacity-90 text-black font-semibold py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
                   >
                     {isSubmitting ? (
                       <>

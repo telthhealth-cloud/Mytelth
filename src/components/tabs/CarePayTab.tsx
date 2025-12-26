@@ -126,7 +126,7 @@ export const CarePayTab = () => {
               <CardDescription>Perfect for individuals and families</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-[100px]">
                 <li className="flex items-start gap-2">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2 h-2 rounded-full bg-primary" />
@@ -139,20 +139,15 @@ export const CarePayTab = () => {
                   </div>
                   <span className="text-sm">Virtual doctor consultations</span>
                 </li>
+             
                 <li className="flex items-start gap-2">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                   </div>
-                  <span className="text-sm">Basic IoMT device</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                  </div>
-                  <span className="text-sm">24/7 AI health assistant</span>
+                  <span className="text-sm">CareManager -Monthly twice Visit</span>
                 </li>
               </ul>
-              <Button className="w-full" variant="outline">Get Started</Button>
+              <Button className="w-full  " variant="outline">Get Started</Button>
             </CardContent>
           </Card>
 
@@ -168,7 +163,7 @@ export const CarePayTab = () => {
               <CardDescription>Comprehensive care for your whole family</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-7">
                 <li className="flex items-start gap-2">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2 h-2 rounded-full bg-primary" />
@@ -179,13 +174,13 @@ export const CarePayTab = () => {
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                   </div>
-                  <span className="text-sm">Quarterly home visits</span>
+                  <span className="text-sm">CareManager-Weekly visit</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                   </div>
-                  <span className="text-sm">Advanced IoMT devices</span>
+                  <span className="text-sm">Basic IoMT devices</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -224,7 +219,13 @@ export const CarePayTab = () => {
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                   </div>
-                  <span className="text-sm">Monthly home visits</span>
+                  <span className="text-sm">CareManager-Unlimited visit</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <span className="text-sm">Advance IoMT device</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -250,7 +251,7 @@ export const CarePayTab = () => {
           </Card>
         </div>
 
-        <section className="relative m-10 py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <section id="plans" className="relative m-10 py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-20 left-10 w-96 h-96 bg-[hsl(var(--primary-purple))] rounded-full blur-3xl" />
@@ -393,18 +394,7 @@ export const CarePayTab = () => {
                   ))}
                 </div>
 
-                {/* Central Card */}
-                <div className="flex justify-center mb-8">
-                  <div className="bg-gradient-to-br from-[hsl(var(--primary-purple))] to-[hsl(var(--accent-teal))] rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform">
-                    <div className="flex items-center gap-3">
-                      <CreditCard className="w-10 h-10 text-white" />
-                      <div className="text-white">
-                        <p className="font-bold text-lg">Care Pay™ Card</p>
-                        <p className="text-sm opacity-90">Your Health Gateway</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
 
                 {/* Financial Services (Bottom) */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
