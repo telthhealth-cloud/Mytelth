@@ -100,7 +100,7 @@ export const CareHomeTab = () => {
                   "Instant treatment planning"
                 ]}
                 featured={true}
-                backgroundImage="/src/assets/care-manager-primary.jpg"
+                backgroundImage="/assets/care-manager-primary.jpg"
                 onClick={() => openInquiryDialog("Hospital-Grade Diagnostics")}
               />
             </div>
@@ -114,7 +114,7 @@ export const CareHomeTab = () => {
                 "Comprehensive diagnostics",
                 "Immediate consultation"
               ]}
-              backgroundImage="/src/assets/care-15min-cycle.jpg"
+              backgroundImage="/assets/care-15min-cycle.jpg"
               onClick={() => openInquiryDialog("15-Minute Care Cycle")}
             />
             
@@ -127,7 +127,7 @@ export const CareHomeTab = () => {
                 "Round-the-clock support",
                 "Emergency response"
               ]}
-              backgroundImage="/src/assets/care-247-companion.jpg"
+              backgroundImage="/assets/care-247-companion.jpg"
               onClick={() => openInquiryDialog("24/7 Health Companion")}
             />
             
@@ -142,7 +142,7 @@ export const CareHomeTab = () => {
                   "Family care coordination",
                   "Up to 65% cost savings"
                 ]}
-                backgroundImage="/src/assets/care-personalized-plan.jpg"
+                backgroundImage="/assets/care-personalized-plan.jpg"
                 onClick={() => openInquiryDialog("Care Plans Inquiry")}
               />
             </div>
@@ -176,7 +176,7 @@ export const CareHomeTab = () => {
                   "Health education"
                 ]}
                 featured={true}
-                backgroundImage="/src/assets/care-manager-primary.jpg"
+                backgroundImage="/assets/care-manager-primary.jpg"
                 onClick={() => openInquiryDialog("Primary Care")}
               />
             </div>
@@ -190,7 +190,7 @@ export const CareHomeTab = () => {
                 "Medication management",
                 "Lifestyle coaching"
               ]}
-              backgroundImage="/src/assets/care-manager-chronic.jpg"
+              backgroundImage="/assets/care-manager-chronic.jpg"
               onClick={() => openInquiryDialog("Chronic Disease Management")}
             />
             
@@ -203,7 +203,7 @@ export const CareHomeTab = () => {
                 "On-site treatment",
                 "Follow-up care"
               ]}
-              backgroundImage="/src/assets/care-urgent.jpg"
+              backgroundImage="/assets/care-urgent.jpg"
               onClick={() => openInquiryDialog("Acute Care")}
             />
             
@@ -216,7 +216,7 @@ export const CareHomeTab = () => {
                 "Progress tracking",
                 "Complication prevention"
               ]}
-              backgroundImage="/src/assets/care-followup.jpg"
+              backgroundImage="/assets/care-followup.jpg"
               onClick={() => openInquiryDialog("Follow-Up Care")}
             />
             
@@ -229,7 +229,7 @@ export const CareHomeTab = () => {
                 "Emergency coordination",
                 "Hospital liaison"
               ]}
-              backgroundImage="/src/assets/care-urgent.jpg"
+              backgroundImage="/assets/care-urgent.jpg"
               gradientFrom="from-orange-500"
               gradientTo="to-red-500"
               onClick={() => openInquiryDialog("Urgent Care")}
@@ -246,7 +246,7 @@ export const CareHomeTab = () => {
                   "Sample collection & delivery",
                   "Unified health records"
                 ]}
-                backgroundImage="/src/assets/care-specialty.jpg"
+                backgroundImage="/assets/care-specialty.jpg"
                 onClick={() => openInquiryDialog("Specialty Coordination")}
               />
             </div>
@@ -260,7 +260,7 @@ export const CareHomeTab = () => {
                 "Nutrition planning",
                 "Mental health support"
               ]}
-              backgroundImage="/src/assets/care-wellness.jpg"
+              backgroundImage="/assets/care-wellness.jpg"
               onClick={() => openInquiryDialog("Wellness Programs")}
             />
           </div>
@@ -279,7 +279,7 @@ export const CareHomeTab = () => {
                     "Vaccination services",
                     "Health education"
                   ]}
-                  backgroundImage="/src/assets/care-manager-primary.jpg"
+                  backgroundImage="/assets/care-manager-primary.jpg"
                   onClick={() => openInquiryDialog("Primary Care")}
                 />
               </div>
@@ -293,7 +293,7 @@ export const CareHomeTab = () => {
                     "Medication management",
                     "Lifestyle coaching"
                   ]}
-                  backgroundImage="/src/assets/care-manager-chronic.jpg"
+                  backgroundImage="/assets/care-manager-chronic.jpg"
                   onClick={() => openInquiryDialog("Chronic Disease Management")}
                 />
               </div>
@@ -307,7 +307,7 @@ export const CareHomeTab = () => {
                     "On-site treatment",
                     "Follow-up care"
                   ]}
-                  backgroundImage="/src/assets/care-urgent.jpg"
+                  backgroundImage="/assets/care-urgent.jpg"
                   onClick={() => openInquiryDialog("Acute Care")}
                 />
               </div>
@@ -321,7 +321,7 @@ export const CareHomeTab = () => {
                     "Progress tracking",
                     "Complication prevention"
                   ]}
-                  backgroundImage="/src/assets/care-followup.jpg"
+                  backgroundImage="/assets/care-followup.jpg"
                   onClick={() => openInquiryDialog("Follow-Up Care")}
                 />
               </div>
@@ -335,7 +335,7 @@ export const CareHomeTab = () => {
                     "Emergency coordination",
                     "Hospital liaison"
                   ]}
-                  backgroundImage="/src/assets/care-urgent.jpg"
+                  backgroundImage="/assets/care-urgent.jpg"
                   onClick={() => openInquiryDialog("Urgent Care")}
                 />
               </div>
@@ -350,7 +350,7 @@ export const CareHomeTab = () => {
                     "Sample collection & delivery",
                     "Unified health records"
                   ]}
-                  backgroundImage="/src/assets/care-specialty.jpg"
+                  backgroundImage="/assets/care-specialty.jpg"
                   onClick={() => openInquiryDialog("Specialty Coordination")}
                 />
               </div>
@@ -364,7 +364,7 @@ export const CareHomeTab = () => {
                     "Nutrition planning",
                     "Mental health support"
                   ]}
-                  backgroundImage="/src/assets/care-wellness.jpg"
+                  backgroundImage="/assets/care-wellness.jpg"
                   onClick={() => openInquiryDialog("Wellness Programs")}
                 />
               </div>
@@ -387,7 +387,7 @@ export const CareHomeTab = () => {
             <div className="hidden md:grid grid-cols-3 gap-8">
               <div className="relative group overflow-hidden rounded-xl border-2 border-telth-teal/20 hover:border-telth-teal hover:-translate-y-2 transition-all duration-300">
                 <div className="aspect-[4/5] relative">
-                  <img src="/src/assets/app-booking-screen.jpg" alt="Book Visit" className="w-full h-full object-cover" />
+                  <img src="/assets/app-booking-screen.jpg" alt="Book Visit" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                   <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-gradient-to-br from-telth-teal to-telth-purple flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                     <span className="text-white text-xl font-bold">1</span>
@@ -405,7 +405,7 @@ export const CareHomeTab = () => {
 
               <div className="relative group overflow-hidden rounded-xl border-2 border-telth-purple/20 hover:border-telth-purple hover:-translate-y-2 transition-all duration-300">
                 <div className="aspect-[4/5] relative">
-                  <img src="/src/assets/care-assessment.jpg" alt="15-Minute Assessment" className="w-full h-full object-cover" />
+                  <img src="/assets/care-assessment.jpg" alt="15-Minute Assessment" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                   <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-gradient-to-br from-telth-teal to-telth-purple flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                     <span className="text-white text-xl font-bold">2</span>
@@ -423,7 +423,7 @@ export const CareHomeTab = () => {
 
               <div className="relative group overflow-hidden rounded-xl border-2 border-telth-teal/20 hover:border-telth-teal hover:-translate-y-2 transition-all duration-300">
                 <div className="aspect-[4/5] relative">
-                  <img src="/src/assets/care-continuous.jpg" alt="Continuous Care" className="w-full h-full object-cover" />
+                  <img src="/assets/care-continuous.jpg" alt="Continuous Care" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                   <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-gradient-to-br from-telth-teal to-telth-purple flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                     <span className="text-white text-xl font-bold">3</span>
@@ -448,7 +448,7 @@ export const CareHomeTab = () => {
                 </div>
                 <div className="glass-card p-4 rounded-xl border border-telth-teal/20 flex-1">
                   <div className="aspect-video relative rounded-lg overflow-hidden mb-3">
-                    <img src="/src/assets/app-booking-screen.jpg" alt="Book Visit" className="w-full h-full object-cover" />
+                    <img src="/assets/app-booking-screen.jpg" alt="Book Visit" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-telth-teal to-telth-purple bg-clip-text text-transparent">
                     Book Visit
@@ -465,7 +465,7 @@ export const CareHomeTab = () => {
                 </div>
                 <div className="glass-card p-4 rounded-xl border border-telth-purple/20 flex-1">
                   <div className="aspect-video relative rounded-lg overflow-hidden mb-3">
-                    <img src="/src/assets/care-assessment.jpg" alt="Assessment" className="w-full h-full object-cover" />
+                    <img src="/assets/care-assessment.jpg" alt="Assessment" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-telth-teal to-telth-purple bg-clip-text text-transparent">
                     15-Minute Assessment
@@ -482,7 +482,7 @@ export const CareHomeTab = () => {
                 </div>
                 <div className="glass-card p-4 rounded-xl border border-telth-teal/20 flex-1">
                   <div className="aspect-video relative rounded-lg overflow-hidden mb-3">
-                    <img src="/src/assets/care-continuous.jpg" alt="Continuous Care" className="w-full h-full object-cover" />
+                    <img src="/assets/care-continuous.jpg" alt="Continuous Care" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-telth-teal to-telth-purple bg-clip-text text-transparent">
                     Continuous Care
@@ -512,7 +512,7 @@ export const CareHomeTab = () => {
               <div className="relative order-2 lg:order-1">
                 <div className="aspect-[3/4] lg:aspect-[4/3] rounded-2xl overflow-hidden glass-card border-2 border-telth-purple/20">
                   <img 
-                    src="/src/assets/care-manager-hero.jpg" 
+                    src="/assets/care-manager-hero.jpg" 
                     alt="Your Care Manager"
                     className="w-full h-full object-cover"
                   />
