@@ -7,12 +7,12 @@ import { PillarGlassCard } from "../PillarGlassCard";
 import { CircularFlowDiagram } from "../CircularFlowDiagram";
 import { InquiryDialog } from "../InquiryDialog";
 import { Button } from "../ui/button";
-import careAssessmentImg from "@/assets/care-assessment.jpg";
-import careContinuousImg from "@/assets/care-continuous.jpg";
-import careWellnessImg from "@/assets/care-wellness.jpg";
-import carePersonalizedImg from "@/assets/care-personalized-plan.jpg";
-import heroCommunityImg from "@/assets/hero-community.jpg";
-import care15minImg from "@/assets/care-15min-cycle.jpg";
+import careAssessmentImg from "/assets/care-assessment.jpg";
+import careContinuousImg from "/assets/care-continuous.jpg";
+import careWellnessImg from "/assets/care-wellness.jpg";
+import carePersonalizedImg from "/assets/care-personalized-plan.jpg";
+import heroCommunityImg from "/assets/hero-community.jpg";
+import care15minImg from "/assets/care-15min-cycle.jpg";
 import {
   Building2,
   Shield,

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { NavLink } from "./NavLink";
 import { cn } from "@/lib/utils";
 import { Sparkles } from "lucide-react";
-import telthLogo from "@/assets/telth-logo.svg";
+import telthLogo from "/assets/telth-logo.svg";
 
 const tabs = [
   { id: "community", label: "Care @ Community", path: "/" },

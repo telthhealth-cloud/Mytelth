@@ -1,6 +1,6 @@
 import { HeroSection } from "../HeroSection";
 import { Button } from "../ui/button";
-import heroCarePay from "@/assets/hero-carepay.jpg";
+import heroCarePay from "/assets/hero-carepay.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import card2 from '../../../public/images/Paycard2.jpeg'
 import card from '../../../public/images/Paycard.jpeg'

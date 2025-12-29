@@ -64,11 +64,17 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Global Operations Center<br />
+                      Global Operations Headquarter <br />
+                     909 Rose Ave,uite 400,Rockville,MD,USA
+                    </p>
+                    <br />
+                      <p className="text-muted-foreground">
+                      Global Operation Centers<br />
                       Multiple locations across USA, UK, and India
                     </p>
                   </CardContent>
                 </Card>
+            
               </div>
             </div>
 

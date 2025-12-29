@@ -49,7 +49,7 @@ export const FuturisticHero = () => {
                 Health Intelligence
               </span>
               <br />
-              at Your Fingertips
+              at Your Fingertips 
             </motion.h1>
 
             <motion.p

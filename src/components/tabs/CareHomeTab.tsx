@@ -52,6 +52,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+import caremanager from '../../../public/assets/care-manager-hero.jpg'
+
 export const CareHomeTab = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedInquiryType, setSelectedInquiryType] = useState("");

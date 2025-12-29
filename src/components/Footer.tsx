@@ -11,7 +11,6 @@ export const Footer = () => {
             <div className="flex flex-col gap-3">
               <Link to="/about" className="text-white/80 hover:text-white transition-colors">About</Link>
               <Link to="/about" className="text-white/80 hover:text-white transition-colors">Mission</Link>
-              <Link to="/about" className="text-white/80 hover:text-white transition-colors">Team</Link>
               <Link to="/careers" className="text-white/80 hover:text-white transition-colors">Careers</Link>
             </div>
           </div>
