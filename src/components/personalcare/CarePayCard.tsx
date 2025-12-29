@@ -163,21 +163,7 @@ export const CarePayCard = () => {
                 </div>
               ))}
             </div>
-
-            {/* Central Card */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-gradient-to-br from-[hsl(var(--primary-purple))] to-[hsl(var(--accent-teal))] rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform">
-                <div className="flex items-center gap-3">
-                  <CreditCard className="w-10 h-10 text-white" />
-                  <div className="text-white">
-                    <p className="font-bold text-lg">Care Pay™ Card</p>
-                    <p className="text-sm opacity-90">Your Health Gateway</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Financial Services (Bottom) */}
+              {/* Financial Services (Bottom) */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {financialServices.map((service, i) => (
                 <div
@@ -189,6 +175,19 @@ export const CarePayCard = () => {
                   </p>
                 </div>
               ))}
+            </div>
+
+            {/* Central Card */}
+            <div className="flex justify-center mt-8">
+              <div className="bg-gradient-to-br from-[hsl(var(--primary-purple))] to-[hsl(var(--accent-teal))] rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform">
+                <div className="flex items-center gap-3">
+                  <CreditCard className="w-10 h-10 text-white" />
+                  <div className="text-white">
+                    <p className="font-bold text-lg">Care Pay™ Card</p>
+                    <p className="text-sm opacity-90">Your Health Gateway</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Connecting Lines */}
@@ -222,7 +221,7 @@ export const CarePayCard = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
-          className="text-center mt-16"
+          className="text-center mt-10"
         >
           <p className="text-gray-600 mb-6">
             Ready to experience the future of healthcare payments?
