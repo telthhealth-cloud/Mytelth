@@ -17,11 +17,11 @@ const PrivacyPolicy: React.FC = () => {
         </div>
       </header>
       {/* Content */}
-      <main className="privacy-content">
+      <main className="privacy-content -p-10">
         <h1 className="ptitle">TELTH HEALTHCARE PRIVACY POLICY (INDIA)</h1>
         <br />
         <p><strong>Last Updated:</strong> April 22, 2025</p>
-
+            <br />
         <h2>1. INTRODUCTION</h2>
         <p>
           Telth Healthcare Private Limited having its registered office at G2,
@@ -380,8 +380,8 @@ const PrivacyPolicy: React.FC = () => {
         /* ===== CONTENT ===== */
         .privacy-content {
           max-width: 1000px;
-          margin: 24px auto;
-          padding: 20px;
+          margin: 14px auto;
+          padding: 10px;
           border-radius: 12px;
         }
 
@@ -405,7 +405,6 @@ const PrivacyPolicy: React.FC = () => {
 
         h1, h2, h3 {
           color: #0f172a;
-          margin-top: 24px;
         }
 
         p, li {
