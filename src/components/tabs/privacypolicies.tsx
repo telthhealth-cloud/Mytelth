@@ -5,8 +5,17 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="privacy-page">
       {/* Header */}
-         <Header/>
+           <header className="privacy-header">
+        <img
+          src="/assets/telth-logo.svg"
+          alt="Telth Logo"
+          className="privacy-logo"
+        />
 
+        <div className="privacy-contact">
+          📞 <span>1800-570-0140</span>
+        </div>
+      </header>
       {/* Content */}
       <main className="privacy-content">
         <h1 className="ptitle">TELTH HEALTHCARE PRIVACY POLICY (INDIA)</h1>
@@ -310,60 +319,90 @@ const PrivacyPolicy: React.FC = () => {
           Telth Healthcare Private Limited<br />
           G2, Tidel Park Neo, Karuppur, Salem 636011<br />
           Email: info@telth.org<br />
-          Phone: +91 79048 77505
+         
         </p>
-
+        <br />
         <p>
           <strong>Customer Support:</strong><br />
           Email: support@telth.org<br />
           Toll-Free: 1800 570 0140
         </p>
 
-        <p>
+        <p className="text-center">
           © 2025 Telth Healthcare Private Limited. All rights reserved.
         </p>
       </main>
 
       {/* Styles */}
-      <style jsx>{`
-        .privacy-page {
-          min-height: 100vh;
-          background: url("/logo-watermark.png") center center / 500px no-repeat fixed;
-    
+        <style>{`
+        /* ===== BASE RESET ===== */
+        * {
+          box-sizing: border-box;
         }
 
+        body {
+          margin: 0;
+        }
+
+        /* ===== PAGE ===== */
+        .privacy-page {
+          min-height: 100vh;
+          background: url("/assets/telth-bg.png") center / 500px repeat;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        /* ===== HEADER ===== */
         .privacy-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-            fontFamily:"sans-serif",
-          padding: 16px 40px;
-        
-        
+          padding: 12px 16px;
           position: sticky;
           top: 0;
-          z-index: 10;
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(8px);
+          z-index: 100;
         }
 
-        .logo img {
-          padding: 8px;
-          height: 48px;
+        .privacy-logo {
+          height: 44px;
         }
 
-        .contact {
+        .privacy-contact {
+          display: flex;
+          align-items: center;
+          gap: 6px;
           font-weight: 600;
           color: #0f172a;
+          font-size: 14px;
+          white-space: nowrap;
         }
 
-        .ptitle{
-        color:red
-        }
-
+        /* ===== CONTENT ===== */
         .privacy-content {
           max-width: 1000px;
-          margin: 40px auto;
-          padding: 40px;
+          margin: 24px auto;
+          padding: 20px;
           border-radius: 12px;
+          background: rgba(255, 255, 255, 0.85);
+        }
+
+        .ptitle {
+          text-align: center;
+          color: #2563eb;
+          font-size: 22px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        h3 {
+          font-size: 17px;
         }
 
         h1, h2, h3 {
@@ -374,10 +413,82 @@ const PrivacyPolicy: React.FC = () => {
         p, li {
           line-height: 1.7;
           color: #334155;
+          font-size: 14.5px;
         }
 
         ul {
-          padding-left: 20px;
+          padding-left: 18px;
+        }
+
+        .text-center {
+          text-align: center;
+          margin-top: 32px;
+          font-size: 13px;
+          color: #64748b;
+        }
+
+        /* ===== TABLET (≥768px) ===== */
+        @media (min-width: 768px) {
+          .privacy-header {
+            padding: 16px 32px;
+          }
+
+          .privacy-logo {
+            height: 52px;
+          }
+
+          .privacy-content {
+            margin: 40px auto;
+            padding: 32px 40px;
+          }
+
+          .ptitle {
+            font-size: 26px;
+          }
+
+          p, li {
+            font-size: 15.5px;
+          }
+        }
+
+        /* ===== DESKTOP (≥1024px) ===== */
+        @media (min-width: 1024px) {
+          .privacy-content {
+            padding: 40px 48px;
+          }
+
+          .ptitle {
+            font-size: 28px;
+          }
+
+          h1 {
+            font-size: 28px;
+          }
+
+          h2 {
+            font-size: 22px;
+          }
+
+          h3 {
+            font-size: 18px;
+          }
+        }
+
+        /* ===== SMALL MOBILE (≤360px) ===== */
+        @media (max-width: 360px) {
+          .privacy-header {
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+          }
+
+          .privacy-contact {
+            font-size: 13px;
+          }
+
+          .ptitle {
+            font-size: 20px;
+          }
         }
       `}</style>
     </div>

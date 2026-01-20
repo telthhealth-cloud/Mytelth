@@ -2,11 +2,28 @@ import React from "react";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
 
+
+
 const TelthTermsAndConditions: React.FC = () => {
   return (
     <div style={styles.page}>
       {/* ===== HEADER ===== */}
-      <Header />
+ <div className="container mx-auto px-4">
+  <header style={styles.header}>
+    <img
+      src="/assets/telth-logo.svg"
+      alt="Telth Logo"
+      style={styles.logo}
+    />
+
+    <div style={styles.contact}>
+      <div style={styles.contactItem}>
+        📞 <span>1800-570-0140</span>
+      </div>
+    </div>
+  </header>
+</div>
+
 
       {/* ===== CONTENT ===== */}
       <main style={styles.content}>
@@ -381,6 +398,8 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "20px auto",
     padding: "40px",
     borderRadius: "8px",
+      backgroundColor: "transparent", // ✅ ADD THIS
+
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   },
   mainTitle: {
@@ -397,6 +416,41 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: "16px",
     color: "#333",
   },
+  header: {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "16px 32px",       // ✅ spacing around header
+  marginBottom: "20px",
+  borderBottom: "1px solid #ddd",
+   gap: "12px",
+    flexWrap: "wrap",  
+},
+
+  logo: {
+    height: "56px",
+    maxWidth: "100%",
+    objectFit: "contain",
+  },
+
+
+contact: {
+  display: "flex",
+  alignItems: "center",
+  gap: "16px",                // ✅ gap between items
+  fontSize: "14px",
+  fontFamily:"sans-serif",
+  fontWeight: 600,
+},
+
+contactItem: {
+  display: "flex",
+  alignItems: "center",
+  gap: "6px",
+  color: "#333",
+},
+
+
   title: {
     fontSize: "28px",
     fontWeight: 700,
