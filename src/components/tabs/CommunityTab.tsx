@@ -39,6 +39,8 @@ import {
   Users,
   Landmark,
 } from "lucide-react";
+import TermsAndConditions from "./termsandcondition";
+import { Link } from "react-router-dom";
 
 export const CommunityTab = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -894,6 +896,21 @@ export const CommunityTab = () => {
             <p className="mb-2">Questions? Contact our partnerships team:</p>
             <p>
               📧 info@mytelth.com | 📞 1800-570-0140 (India Toll-Free)
+            </p>
+            <p>
+       <Link
+    to="/terms-and-conditions"
+    className="underline hover:text-white"
+  >
+    Terms and conditions apply.
+  </Link>  | 
+   <Link
+    to="/privacy-policies"
+    className="underline hover:text-white"
+  >
+    privacy policies
+  </Link> 
+       
             </p>
           </div>
         </div>

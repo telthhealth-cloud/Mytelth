@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import GlobalPresence from "./pages/GlobalPresence";
 import NotFound from "./pages/NotFound";
+import TermsAndConditions from "./components/tabs/termsandcondition";
+import PrivacyPolicy from "./components/tabs/privacypolicies";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/global-presence" element={<GlobalPresence />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />}/> 
+          <Route path="/privacy-policies" element={<PrivacyPolicy />}/>  
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

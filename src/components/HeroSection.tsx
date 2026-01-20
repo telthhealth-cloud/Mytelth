@@ -19,7 +19,7 @@ export const HeroSection = ({
   video,
   primaryCta,
   secondaryCta,
-  onPrimaryClick,
+  onPrimaryClick, 
   onSecondaryClick,
 }: HeroSectionProps) => {
   return (
