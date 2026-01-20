@@ -359,7 +359,6 @@ const PrivacyPolicy: React.FC = () => {
           padding: 12px 16px;
           position: sticky;
           top: 0;
-          background: rgba(255, 255, 255, 0.9);
           backdrop-filter: blur(8px);
           z-index: 100;
         }
@@ -384,7 +383,6 @@ const PrivacyPolicy: React.FC = () => {
           margin: 24px auto;
           padding: 20px;
           border-radius: 12px;
-          background: rgba(255, 255, 255, 0.85);
         }
 
         .ptitle {
