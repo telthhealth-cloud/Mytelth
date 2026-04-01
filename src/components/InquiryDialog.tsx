@@ -9,7 +9,6 @@ import { Textarea } from "./ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { CheckCircle, Loader2 } from "lucide-react";
 
 const inquirySchema = z.object({
@@ -68,42 +67,55 @@ export const InquiryDialog = ({ open, onOpenChange, defaultInquiryType = "", con
     form.setValue("inquiryType", defaultInquiryType);
   }
 
-  const onSubmit = async (data: InquiryFormData) => {
-    setIsSubmitting(true);
-    
+ const onSubmit = async (data: InquiryFormData) => {
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch("https://contactforms-henna.vercel.app/api/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName: data.fullName,
+        email: data.email,
+        phone: data.phone,
+        company: data.company || "",
+        partnerType: data.inquiryType,
+        location: data.location,
+        message: data.message,
+      }),
+    });
+
+    let result;
     try {
-      const { error } = await supabase.functions.invoke("submit-partner-inquiry", {
-        body: {
-          fullName: data.fullName,
-          email: data.email,
-          phone: data.phone,
-          company: data.company || "",
-          partnerType: data.inquiryType,
-          location: data.location,
-          message: data.message,
-        },
-      });
-
-      if (error) throw error;
-
-      setShowSuccess(true);
-      
-      // Auto-close after 5 seconds
-      setTimeout(() => {
-        handleClose();
-      }, 5000);
-
-    } catch (error) {
-      console.error("Error submitting inquiry:", error);
-      toast({
-        title: "Error",
-        description: "Failed to submit inquiry. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
+      result = await response.json();
+    } catch {
+      result = { success: false };
     }
-  };
+
+    if (!response.ok) {
+      throw new Error(result.message || "Submission failed");
+    }
+
+    setShowSuccess(true);
+
+    setTimeout(() => {
+      handleClose();
+    }, 5000);
+
+  } catch (error: any) {
+    console.error("Error submitting inquiry:", error);
+
+    toast({
+      title: "Error",
+      description: error.message || "Failed to submit inquiry. Please try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const handleClose = () => {
     setShowSuccess(false);
