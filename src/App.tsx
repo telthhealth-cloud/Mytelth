@@ -14,6 +14,7 @@ import GlobalPresence from "./pages/GlobalPresence";
 import NotFound from "./pages/NotFound";
 import TermsAndConditions from "./components/tabs/termsandcondition";
 import PrivacyPolicy from "./components/tabs/privacypolicies";
+import Refundpolicies from "./components/tabs/Refundpolicies";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/global-presence" element={<GlobalPresence />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />}/> 
           <Route path="/privacy-policies" element={<PrivacyPolicy />}/>  
+          <Route path="/refund-policies" element={<Refundpolicies/>}/>  
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

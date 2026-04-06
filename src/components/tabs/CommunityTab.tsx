@@ -908,7 +908,13 @@ export const CommunityTab = () => {
     to="/privacy-policies"
     className="underline hover:text-white"
   >
-    privacy policies
+     Privacy policies
+  </Link>  |
+   <Link
+    to="/refund-policies"
+    className="underline hover:text-white"
+  >
+     Refund policies
   </Link> 
        
             </p>
