@@ -41,7 +41,7 @@ const PrivacyPolicy: React.FC = () => {
               onClick={() => window.history.back()}
               className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
             >
-              Go Back
+              Go to Home
             </button>
           </div>
 
