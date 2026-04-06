@@ -25,7 +25,7 @@ const PrivacyPolicy: React.FC = () => {
         <div className="text-center px-6">
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
-            Coming Soon 🚧
+            Coming Soon !
           </h1>
 
           <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
