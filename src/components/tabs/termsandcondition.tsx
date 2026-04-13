@@ -28,7 +28,7 @@ const TelthTermsAndConditions: React.FC = () => {
       {/* ===== CONTENT ===== */}
       <main style={styles.content}>
         <h2 style={styles.title}>TERMS AND CONDITIONS</h2>
-        <p style={styles.updated}>Last Updated: April 22, 2025</p>
+        <p style={styles.updated}>Last Updated: April 13, 2026</p>
 
         {/* 1 */}
         <Section title="1. INTRODUCTION AND ACCEPTANCE OF TERMS">
@@ -356,7 +356,7 @@ const TelthTermsAndConditions: React.FC = () => {
    
       </main>
          <p className="text-center">
-          © 2025 Telth Healthcare Private Limited. All rights reserved.
+          © 2026 Telth Healthcare Private Limited. All rights reserved.
         </p>
     </div>
   );

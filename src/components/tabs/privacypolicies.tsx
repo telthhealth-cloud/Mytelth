@@ -20,7 +20,7 @@ const PrivacyPolicy: React.FC = () => {
       <main className="privacy-content -p-10">
         <h1 className="ptitle">TELTH HEALTHCARE PRIVACY POLICY (INDIA)</h1>
         <br />
-        <p><strong>Last Updated:</strong> April 22, 2025</p>
+        <p><strong>Last Updated:</strong> April 13, 2026</p>
             <br />
         <h2>1. INTRODUCTION</h2>
         <p>
@@ -329,7 +329,7 @@ const PrivacyPolicy: React.FC = () => {
         </p>
 
         <p className="text-center">
-          © 2025 Telth Healthcare Private Limited. All rights reserved.
+          © 2026 Telth Healthcare Private Limited. All rights reserved.
         </p>
       </main>
 
