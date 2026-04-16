@@ -7,48 +7,8 @@ import { MapPin, Clock } from "lucide-react";
 
 const Careers = () => {
   const jobOpenings = [
-    {
-      title: "Senior AI/ML Engineer",
-      location: "Remote / USA",
-      type: "Full-time",
-      department: "Engineering",
-      description: "Lead the development of our quantum-AI healthcare algorithms"
-    },
-    {
-      title: "Healthcare Data Scientist",
-      location: "UK / Remote",
-      type: "Full-time",
-      department: "Research",
-      description: "Analyze health data to improve patient outcomes and care delivery"
-    },
-    {
-      title: "Care Manager",
-      location: "Multiple Locations",
-      type: "Full-time",
-      department: "Care Delivery",
-      description: "Provide personalized healthcare coordination for patients"
-    },
-    {
-      title: "Product Manager - Healthcare",
-      location: "USA / India",
-      type: "Full-time",
-      department: "Product",
-      description: "Drive product strategy for our IoMT device ecosystem"
-    },
-    {
-      title: "Blockchain Engineer",
-      location: "Remote",
-      type: "Full-time",
-      department: "Engineering",
-      description: "Build and maintain our G-Med ID blockchain infrastructure"
-    },
-    {
-      title: "Clinical Integration Specialist",
-      location: "UK",
-      type: "Full-time",
-      department: "Operations",
-      description: "Partner with healthcare providers to integrate Telth solutions"
-    }
+  
+  
   ];
 
   return (
@@ -94,7 +54,20 @@ const Careers = () => {
 
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8">Open Positions</h2>
-            <div className="space-y-4">
+             {jobOpenings.length === 0 ? (
+    <Card className="text-center py-12">
+      <CardContent className="pt-8">
+        <div className="space-y-3">
+          <h3 className="text-2xl font-semibold">No Open Positions Currently</h3>
+          <p className="text-muted-foreground">
+            We don't have any active job openings right now, but we're always interested in 
+            hearing from talented individuals. Feel free to submit a general application below!
+          </p>
+        </div>
+      </CardContent>
+    </Card>
+  ):(
+     <div className="space-y-4">
               {jobOpenings.map((job, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
@@ -123,9 +96,10 @@ const Careers = () => {
                   </CardHeader>
                 </Card>
               ))}
-            </div>
+              </div>
+  )}
           </div>
-        </section>
+        </section> 
 
         <section className="bg-muted py-16">
           <div className="container">
